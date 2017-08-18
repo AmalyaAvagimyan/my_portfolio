@@ -18,3 +18,11 @@ $(document).ready(function(){
 
 
 /*scrolling effecrt ends*/
+$(document).scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 101) {
+    $('.skill').fadeIn(777);
+  } else {
+    $('.skill').fadeOut(777);
+  }
+});
