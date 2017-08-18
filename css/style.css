@@ -71,8 +71,38 @@ a.navbar-brand {
 .projects h2 {
 	padding-bottom: 15px;
 }
-
-
+/**/
+.project_img {
+  position: relative;
+  display: inline-block;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  background-color: #000;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity: 0.9;
+}
+.project_img:hover .overlay {
+  height: 100%;
+}
+.text {
+  white-space: nowrap; 
+  color: #498e7f;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 /*Projects Section end*/
 
 
@@ -86,7 +116,6 @@ a.navbar-brand {
 	width: 100%;
 	font: bold 16px sans-serif;
 	text-align: left;
-
 	padding: 50px 60px 40px;
 	margin-top: 80px;
 	overflow: hidden;
@@ -98,10 +127,8 @@ a.navbar-brand {
 	float: left;
 }
 
-/* The company logo */
 
 .footer-distributed h3{
-	color:  #ffffff;
 	font: normal 36px 'Cookie', cursive;
 	margin: 0 0 10px;
 }
@@ -125,8 +152,8 @@ a.navbar-brand {
 	color:  inherit;
 }
 
-.footer-distributed .footer-company-name{
-	color:  #8f9296;
+.footer-distributed .footer-name{
+	color:  #fff;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -145,12 +172,10 @@ a.navbar-brand {
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
@@ -183,12 +208,10 @@ a.navbar-brand {
 	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
 	border: none;
 	resize: none;
-
 	font: inherit;
 	font-size: 14px;
 	font-weight: normal;
 	color:  #d1d2d2;
-
 	width: 400px;
 	padding: 18px;
 }
@@ -219,14 +242,24 @@ a.navbar-brand {
 
 .footer-distributed form button{
 	border-radius: 3px;
-	background-color:  #33383b;
+	background-color:  #498e7f;
 	color: #ffffff;
 	border: 0;
 	padding: 15px 50px;
 	font-weight: bold;
 	float: right;
 }
-
+.fa:hover {
+    color: #498e7f;
+}
+button:focus,
+textarea:focus,
+input[type="text"]:focus
+{   
+  border-color: #498e7f;
+  box-shadow: 0 1px 1px #498e7f inset, 0 0 8px #498e7f;
+  outline: 0 none;
+}
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 1000px) {
@@ -235,7 +268,7 @@ a.navbar-brand {
 		font: bold 14px sans-serif;
 	}
 
-	.footer-distributed .footer-company-name{
+	.footer-distributed .footer-name{
 		font-size: 12px;
 	}
 
@@ -278,6 +311,8 @@ a.navbar-brand {
 	.footer-distributed form button{
 		float: none;
 	}
+
+
 }
 
 @media screen and (max-width: 768px) {
